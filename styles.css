@@ -1,0 +1,86 @@
+:root {
+    --backCol: #193d3f;
+    --primCol: #ffe762;
+}
+
+.center {
+    color: var(--primCol);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topText {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.topPanel {
+    border-radius: 7px;
+
+    margin-bottom: 20px;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    height: 80px;
+
+    background-color: var(--backCol);
+    color: var(--primCol);
+    font-style: normal;
+}
+
+body {
+    background-color: darkcyan;
+}
+
+.button {
+    border-radius: 7px;
+    color: var(--backCol);
+    background-color: var(--primCol);
+    font: bold 14px "Roboto", sans-serif;
+
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 50%;
+    box-sizing: border-box;
+}
+
+.button:hover{
+    color: white;
+    background-color: darkgoldenrod;
+}
+
+p:hover{
+    color: white;
+}
+
+.bottomPanel {
+    border-radius: 7px;
+
+    margin-bottom: 20px;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+
+    background-color: var(--backCol);
+    color: var(--primCol);
+    font-style: normal;
+}
