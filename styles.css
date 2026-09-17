@@ -3,12 +3,19 @@
     --primCol: #ffe762;
 }
 
-.center {
-    color: var(--primCol);
+.centerText{
+    text-align: center;
+}
 
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.gold{
+    transition: color ease-in-out 0.5s;
+    color: var(--primCol);
 }
 
 .topText {
@@ -37,9 +44,14 @@
     background-color: var(--backCol);
     color: var(--primCol);
     font-style: normal;
+
+
+    transition: background-color ease-in-out 0.5s;
 }
 
 body {
+
+    transition: background-color ease-in-out 0.5s;
     background-color: darkcyan;
 }
 
@@ -58,10 +70,15 @@ body {
 .button:hover{
     color: white;
     background-color: darkgoldenrod;
+
+
+    transition: background-color, color ease-in-out 0.5s;
 }
 
 p:hover{
     color: white;
+
+    transition: color ease-in-out 0.5s;
 }
 
 .bottomPanel {
@@ -69,10 +86,7 @@ p:hover{
 
     margin-bottom: 20px;
 
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 5px;
 
 
     display: flex;
@@ -83,4 +97,75 @@ p:hover{
     background-color: var(--backCol);
     color: var(--primCol);
     font-style: normal;
+
+
+    transition: color, background-color ease-in-out 0.5s;
+}
+.u{
+    text-decoration: underline;
+}
+.bigText{
+    font-size: 50px;
+}
+.ns{
+    user-select: none;
+}
+.us{
+    user-select: all;
+}
+
+.panel{
+    text-spacing: none;
+}
+
+h3,
+h4,
+p {
+    margin: 0;
+    user-select: none;
+}
+
+.link{
+    font: 14px "sans-serif", sans-serif;
+    display: inline-block;
+    transition: transform 0.1s ease-in-out;
+
+    color: blue;
+}
+.link:hover{
+    font: bold 14px "sans-serif", sans-serif;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.rotbut{
+    height: 40px;
+    transition: 0.5s ease-in-out;
+}
+.rotbut.rotate{
+     transform: rotate(180deg);
+}
+
+
+body.alt-mode{
+    color: black;
+    background-color: white;
+}
+body.alt-mode p:hover{
+    color: #262626;
+}
+
+body.alt-mode p,
+body.alt-mode h1{
+    color: black;
+}
+
+body.alt-mode header,
+body.alt-mode footer{
+    background-color: lightgray;
+}
+
+body.alt-mode button{
+    background-color: darkgrey;
+    color: black;
 }

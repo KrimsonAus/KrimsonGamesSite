@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="checkContrast()" class="centerText gold">
+<h1 class="bigText u">Jai Vanderark</h1>
+<hr>
+
+<p onclick="switchContrast()">Change contrast</p>
+
+<h1 class="ns" onclick="collapse(this, 'c1')"><span class="u">Education</span><span class="ar">▼</span></h1>
+<div id="c1">
+    <p>Lorem ipsum...</p>
+</div>
+
+<h1 class="ns" onclick="collapse(this, 'c2')"><span class="u">Work Experience</span><span class="ar">▼</span></h1>
+<div class="panel" id="c2">
+    <h3>Lightmare studios, 3d Modeler</h3>
+    <p>Jan 2020–Jan 2021</p>
+    <p>I was responsible for modeling 3d assets for their upcoming games.</p>
+
+    <br>
+    <br>
+
+    <h3>Lite az Air Bakery</h3>
+    <p>March 2022 - Jan 2023</p>
+    <p>I was responsible for preparing food as well as serving customers.</p>
+
+    <br>
+
+    <h4>Reference contact:</h4>
+    <p>Brenda Raymont: <span onclick="callPhone('0411 256 204')" class="us link">0411 256 204</span> (Supervisor, Light az Air Bakery)</p>
+
+    <br>
+    <br>
+
+    <h3>Easy Sheds</h3>
+    <p>March 2024 - May 2024</p>
+    <p>I was an offsider responsible for helping deliver and handle sheds all throughout Queensland and Northern New
+        South Wales.</p>
+
+    <br>
+
+    <h4>Reference Contact:</h4>
+    <p>Lucas: <span onclick="callPhone('0451 121 893')" class="us link">0451 121 893</span> (Manager, Easyshed)</p>
+</div>
+
+<h1 class="ns" onclick="collapse(this, 'c3')"><span class="u">Skills</span><span class="ar">▼</span></h1>
+<div id="c3">
+    <p>Lorem ipsum...</p>
+</div>
+
+</body>
+<script src="script.js"></script>
+</html>

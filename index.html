@@ -2,11 +2,12 @@
 <html lang="">
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Home - Jai Vanderark</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="topPanel">
+    <img src="contrast-icon.svg" onclick="switchContrast(this)" class="ns rotbut" alt="contrast"></img>
     <button class="button" type="button" onclick="takeToPage('Resume')">Resume</button>
     <h1>|</h1>
     <button class="button" type="button" onclick="takeToPage('Portfolio')">Portfolio</button>
@@ -14,16 +15,11 @@
 
     <h1 class="topText">Jai Vanderark</h1>
 </header>
-<main>
-
-    <div class="center">
+<main class="centerText gold">
         <p>I am Jai Vanderark, a games programming student currently studying at SAE Brisbane.</p>
-    </div>
-    <div class="center">
         <h1> Some of my best projects:</h1>
-    </div>
     <div class="center">
-        <iframe frameborder="none"
+        <iframe
                 src="https://itch.io/embed/4894665?border_width=5&amp;bg_color=193d3f&amp;fg_color=ffe762&amp;link_color=ffe762&amp;border_color=000000"
                 width="554" height="169"><a href="https://krimsonschool.itch.io/the-dead-end-job">The Dead End Job by
             KrimsonSchool, @DarkiSparki@, JackBriggsSAE</a></iframe>
@@ -31,15 +27,10 @@
 </main>
 <footer class="bottomPanel">
     <p>by Jai Vanderark</p>
-    <p>.   |   .</p>
+    <p>. | .</p>
     <p>made entirely by humans.</p>
 </footer>
 
-<script>
-    function takeToPage(page) {
-        window.location.href = `./${page}`;
-    }
-
-</script>
+<script src="script.js"></script>
 </body>
 </html>
