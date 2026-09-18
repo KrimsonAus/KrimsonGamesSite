@@ -7,7 +7,7 @@
 </head>
 <body>
 <header class="topPanel">
-    <img src="contrast-icon.svg" onclick="switchContrast(this)" class="ns rotbut" alt="contrast"></img>
+    <img src="graphics/contrast-icon.svg" onclick="switchContrast(this)" class="ns rotbut" alt="contrast"></img>
     <button class="button" type="button" onclick="takeToPage('Resume')">Resume</button>
     <h1>|</h1>
     <button class="button" type="button" onclick="takeToPage('Portfolio')">Portfolio</button>
@@ -16,19 +16,42 @@
     <h1 class="topText">Jai Vanderark</h1>
 </header>
 <main class="centerText gold">
-        <p>I am Jai Vanderark, a games programming student currently studying at SAE Brisbane.</p>
-        <h1> Some of my best projects:</h1>
+
+    <div onclick="downloadFile('./graphics/PFP_Lain.png', 'LainPFP')" class="pfp clickable">
+        <img class="pfpImage" src="graphics/PFP_Lain.png" alt="PFP Lain Logo">
+        <div class="overlay">
+            <p>My PFP</p>
+        </div>
+    </div>
+
+    <p>I am Jai Vanderark, a games programming student currently studying at SAE Brisbane.</p>
+    <p>I made this website with my own hands as a portfolio and work showcase.</p>
+    <p>Have a look around or just go straight to my <span onclick="takeToPage('Portfolio')" class="link">Portfolio</span> or <span onclick="takeToPage('Resume')" class="link">Resume</span>.</p>
+    <h1> Some of my best projects:</h1>
     <div class="center">
-        <iframe
+        <iframe class="glow" frameborder="0"
                 src="https://itch.io/embed/4894665?border_width=5&amp;bg_color=193d3f&amp;fg_color=ffe762&amp;link_color=ffe762&amp;border_color=000000"
                 width="554" height="169"><a href="https://krimsonschool.itch.io/the-dead-end-job">The Dead End Job by
             KrimsonSchool, @DarkiSparki@, JackBriggsSAE</a></iframe>
     </div>
+
+    <br>
+
+    <div class="center">
+        <iframe class="glow" frameborder="0"
+                src="https://itch.io/embed/3991655?border_width=5&amp;bg_color=327345&amp;fg_color=f7ff53&amp;link_color=ffffff"
+                width="560" height="175"><a href="https://krimsonschool.itch.io/eclipse-reborn">Eclipse Reborn by
+            KrimsonSchool, @DarkiSparki@</a></iframe>
+    </div>
+
 </main>
-<footer class="bottomPanel">
+<footer class="bottomPanel stickBot">
     <p>by Jai Vanderark</p>
-    <p>. | .</p>
+    <p>|</p>
     <p>made entirely by humans.</p>
+    <img onclick="window.open('https://archlinux.org/')" src="graphics/8831/archlinux.png" class="link">
+    <img onclick="window.open('https://www.sega.com/sonic-the-hedgehog')" src="graphics/8831/autism.png" class="link">
+    <img onclick="window.open('https://the-wired-navi.vercel.app/')" src="graphics/8831/lain.gif" class="link">
 </footer>
 
 <script src="script.js"></script>

@@ -92,12 +92,11 @@ p:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 25px;
+    height: 30px;
 
     background-color: var(--backCol);
     color: var(--primCol);
     font-style: normal;
-
 
     transition: color, background-color ease-in-out 0.5s;
 }
@@ -121,8 +120,10 @@ p:hover{
 h3,
 h4,
 p {
-    margin: 0;
+    margin: 5px;
     user-select: none;
+
+    transition: color    ease-in-out 0.5s;
 }
 
 .link{
@@ -168,4 +169,91 @@ body.alt-mode footer{
 body.alt-mode button{
     background-color: darkgrey;
     color: black;
+}
+
+.stickBot {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+img{
+    margin: 5px;
+}
+
+.glow{
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.glow:hover{
+    box-shadow: 0px 5px 25px yellow;
+    box-shadow-blur: 5px;
+}
+
+
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    border-radius: 25%;
+}
+
+.pfp{
+    border-radius: 25%;
+    position: relative;
+    left: calc(50% - 125px);
+    width: 250px;
+    overflow: hidden;
+
+    transition: .5s ease;
+}
+
+.pfp:hover .overlay{
+    opacity: 0.97;
+    mask-clip: content-box;
+}
+
+.pfp:hover{
+    border-radius: 50%;
+}
+
+.pfp:hover .pfpImage{
+    filter: brightness(200%);
+}
+
+.pfpImage{
+    border-radius: 25%;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+
+    transition: .5s ease;
+}
+
+.overlay p{
+    text-transform: uppercase;
+    margin: 0;
+    font: bold 50px "Roboto", sans-serif;
+
+    background: url("./graphics/PFP_Lain.png") no-repeat center / cover;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.clickable:hover{
+    cursor: pointer;
 }

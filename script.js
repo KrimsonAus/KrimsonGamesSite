@@ -53,3 +53,23 @@ function switchText(self,tts, tts2){
         self.textContent = tts;
     }
 }
+
+async function downloadFile(url, filename) {
+    try {
+        const response = await fetch(url, {
+            headers: {
+                Accept:
+                    "application/json, text/plain,application/zip, image/png, image/jpeg, image/*",
+            },
+        });
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const blob = await response.blob();
+        const blobUrl = URL.createObjectURL(blob);
+        saveFile(blobUrl, filename);
+        URL.revokeObjectURL(blobUrl);
+    } catch (err) {
+        console.error("Error in fetching and downloading file:", err);
+    }
+}
