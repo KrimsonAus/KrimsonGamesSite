@@ -73,3 +73,12 @@ async function downloadFile(url, filename) {
         console.error("Error in fetching and downloading file:", err);
     }
 }
+
+function saveFile(url, filename) {
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = filename || "file-name";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
