@@ -3,6 +3,19 @@
     --primCol: #ffe762;
 }
 
+@font-face {
+    font-family: "LainTitle";
+    src: url("./fonts/LainTitle.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "LainText";
+    src: url("./fonts/LainText.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 .centerText{
     text-align: center;
 }
@@ -22,7 +35,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-
+    font: normal 50px "LainTitle";
 }
 
 .topPanel {
@@ -256,4 +269,27 @@ img{
 
 .clickable:hover{
     cursor: pointer;
+}
+
+.itchButton{
+    background-color: #fa5c5c;
+    font-size: 30px;
+}
+
+.itchButton:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.itchButton img{
+    width: 15%;
+}
+
+.itchButton span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 75px;
+    width: 300px;
 }

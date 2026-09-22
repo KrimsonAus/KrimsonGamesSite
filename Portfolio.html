@@ -1,33 +1,24 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Home - Jai Vanderark</title>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="./graphics/ICO.png?">
 </head>
 <body>
 <header class="topPanel">
     <img src="graphics/contrast-icon.svg" onclick="switchContrast(this)" class="ns rotbut" alt="contrast"></img>
-    <button class="button" type="button" onclick="takeToPage('Resume')">Resume</button>
+    <button class="button" type="button" onclick="takeToPage('index')">Home</button>
     <h1>|</h1>
-    <button class="button" type="button" onclick="takeToPage('Portfolio')">Portfolio</button>
+    <button class="button" type="button" onclick="takeToPage('Resume')">Resume</button>
 
 
-    <h1 class="topText">Jai Vanderark</h1>
+    <h1 class="topText">Portfolio</h1>
 </header>
-<main class="centerText gold">
 
-    <div onclick="downloadFile('./graphics/PFP_Lain.png', 'LainPFP')" class="pfp clickable">
-        <img class="pfpImage" src="graphics/PFP_Lain.png" alt="PFP Lain Logo">
-        <div class="overlay">
-            <p>My PFP</p>
-        </div>
-    </div>
-
-    <p>I'm Jai Vanderark, a games programming student currently studying at SAE Brisbane.</p>
-    <p>I created this website myself as a portfolio and work showcase.</p>
-    <p>Have a look around the site or just go straight to my <span onclick="takeToPage('Portfolio')" class="link">Portfolio</span> or <span onclick="takeToPage('Resume')" class="link">Resume</span>.</p>
+<main class="centerText">
     <h1> Some of my best projects:</h1>
     <div class="center">
         <iframe class="glow" frameborder="0"
@@ -45,7 +36,18 @@
             KrimsonSchool, @DarkiSparki@</a></iframe>
     </div>
 
+    <br>
+    <br>
+
+    <h1>My University workload can be seen in its entirety here:</h1>
+    <br>
+    <button onclick="window.open('https://krimsonschool.itch.io')" class="itchButton glow"><span><img src="https://static.itch.io/images/itchio-textless-black.svg"><p>Krimson Games</p></span></button>
+
+    <br>
+
+
 </main>
+
 <footer class="bottomPanel stickBot">
     <p>by Jai Vanderark</p>
     <p>|</p>
@@ -54,7 +56,6 @@
     <img onclick="window.open('https://www.sega.com/sonic-the-hedgehog')" src="graphics/8831/autism.png" class="link">
     <img onclick="window.open('https://the-wired-navi.vercel.app/')" src="graphics/8831/lain.gif" class="link">
 </footer>
-
 <script src="script.js"></script>
 </body>
 </html>

@@ -54,6 +54,8 @@ function switchText(self,tts, tts2){
     }
 }
 
+//thx to https://muhimasri.com/blogs/how-to-save-files-in-javascript/
+
 async function downloadFile(url, filename) {
     try {
         const response = await fetch(url, {
