@@ -6,6 +6,11 @@
 
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="./graphics/ICO.png?">
+
+    <script type="module">
+        import 'https://ka-f.webawesome.com/webawesome@3.14.0/components/carousel/carousel.js';
+        import 'https://ka-f.webawesome.com/webawesome@3.14.0/components/carousel-item/carousel-item.js';
+    </script>
 </head>
 <body>
 <header class="topPanel">
@@ -19,30 +24,88 @@
 </header>
 
 <main class="centerText">
-    <h1> Some of my best projects:</h1>
-    <div class="center">
-        <iframe class="glow" frameborder="0"
-                src="https://itch.io/embed/4894665?border_width=5&amp;bg_color=193d3f&amp;fg_color=ffe762&amp;link_color=ffe762&amp;border_color=000000"
-                width="554" height="169"><a href="https://krimsonschool.itch.io/the-dead-end-job">The Dead End Job by
-            KrimsonSchool, @DarkiSparki@, JackBriggsSAE</a></iframe>
+
+    <div onmouseover="startDrag(this)" class="musicPlayerTop">
+        <h3>Music Mix 9000</h3>
+        <div onmouseover="" class="musicPlayer">
+            <img src="https://cdn-ilejeak.nitrocdn.com/pbXXQLmyDjcgrRLJmHUZKSuYVWJRGGLq/assets/images/optimized/rev-e397324/cdn.musebyclios.com/wp-content/uploads/2024/10/04142042/AOTATame-Impala.jpg">
+            <h1><   ||   ></h1>
+        </div>
     </div>
 
-    <br>
+    <h1> Some of my best projects:</h1>
 
-    <div class="center">
-        <iframe class="glow" frameborder="0"
-                src="https://itch.io/embed/3991655?border_width=5&amp;bg_color=327345&amp;fg_color=f7ff53&amp;link_color=ffffff"
-                width="560" height="175"><a href="https://krimsonschool.itch.io/eclipse-reborn">Eclipse Reborn by
-            KrimsonSchool, @DarkiSparki@</a></iframe>
+    <div onload="autoCarousel()" class="itchGame">
+        <h2>The Dead End Job</h2>
+        <wa-carousel navigation pagination loop mouse-dragging>
+
+            <wa-carousel-item>
+                <img onmouseleave="switchToLow(this)" onmouseover="switchToHD(this)" onclick="scrollNext(this)"
+                     src="./graphics/gamemedia/thedeadendjob/1.png" alt="Mountain landscape"/>
+            </wa-carousel-item>
+
+            <wa-carousel-item>
+                <img onmouseleave="switchToLow(this)" onmouseover="switchToHD(this)" onclick="scrollNext(this)"
+                     src="./graphics/gamemedia/thedeadendjob/2.png" alt="Field of grass"/>
+            </wa-carousel-item>
+
+            <wa-carousel-item>
+                <img onmouseleave="switchToLow(this)" onmouseover="switchToHD(this)" onclick="scrollNext(this )"
+                     src="./graphics/gamemedia/thedeadendjob/3.png" alt="Nature scene"/>
+            </wa-carousel-item>
+
+            <wa-carousel-item>
+                <img onmouseleave="switchToLow(this)" onmouseover="switchToHD(this)" onclick="scrollNext(this)"
+                     src="./graphics/gamemedia/thedeadendjob/4.png" alt="Nature scene"/>
+            </wa-carousel-item>
+
+            <wa-carousel-item>
+                <video width="500px" controls muted autoplay>
+                    <source id="vidPlayer" src="./graphics/gamemedia/thedeadendjob/trailer.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+            </wa-carousel-item>
+
+        </wa-carousel>
+        <button onclick="window.open('https://krimsonschool.itch.io/the-dead-end-job')" class="itchButton">Go to the page</button>
+    </div>
+
+    <div class="itchGame">
+        <h2>Eclipse Reborn</h2>
+        <wa-carousel navigation pagination loop mouse-dragging>
+
+            <wa-carousel-item>
+                <img src="./graphics/gamemedia/eclipsereborn/1.png" alt="Mountain landscape"/>
+            </wa-carousel-item>
+
+            <wa-carousel-item>
+                <img src="./graphics/gamemedia/eclipsereborn/2.png" alt="Field of grass"/>
+            </wa-carousel-item>
+
+            <wa-carousel-item>
+                <img src="./graphics/gamemedia/eclipsereborn/3.png" alt="Nature scene"/>
+            </wa-carousel-item>
+
+            <wa-carousel-item>
+                <img src="./graphics/gamemedia/eclipsereborn/4.png" alt="Nature scene"/>
+            </wa-carousel-item>
+
+        </wa-carousel>
+        <button onclick="window.open('https://krimsonschool.itch.io/eclipse-reborn')" class="itchButton">Go to the page</button>
     </div>
 
     <br>
     <br>
 
     <h1>My University workload can be seen in its entirety here:</h1>
+    <button onclick="window.open('https://krimsonschool.itch.io')" class="itchButton glow"><span><img
+            src="https://static.itch.io/images/itchio-textless-black.svg"><p>Krimson Games</p></span></button>
     <br>
-    <button onclick="window.open('https://krimsonschool.itch.io')" class="itchButton glow"><span><img src="https://static.itch.io/images/itchio-textless-black.svg"><p>Krimson Games</p></span></button>
-
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
 
 

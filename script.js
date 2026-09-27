@@ -1,8 +1,43 @@
 let contrast = false;
+document.addEventListener('DOMContentLoaded', () => {
+    autoCarousel();
+
+});
+
+
+function autoCarousel() {
+    console.log("set to auto");
+
+    const carousels = document.querySelectorAll('wa-carousel');
+    setInterval(() => {
+        carousels.forEach(carousel => {
+            requestAnimationFrame(() => {
+                carousel.next();
+            });
+        });
+    }, 5000);
+}
+
+function switchToHD(self) {
+    self.src = self.src.split('.')[0] + "HD.png"
+}
+
+function switchToLow(self) {
+    self.src = self.src.split('H')[0] + ".png"
+}
+
+// function scrollNext(self) {
+//     self.style.pointerEvents = 'none';
+//
+//     setTimeout(() => {
+//         self.style.pointerEvents = '';
+//     }, 50);
+// }
 
 function takeToPage(page) {
     window.location.href = `./${page}.html`;
 }
+
 function collapse(elem, cont) {
     const arrow = elem.querySelector('.ar');
     const content = document.getElementById(cont);
@@ -16,11 +51,15 @@ function collapse(elem, cont) {
     }
 }
 
-function callPhone(num){
+function callPhone(num) {
     window.open(`tel:${num}`);
 }
 
-function switchContrast(self){
+function openEmail(email){
+    window.open(`mailto:${email}`);
+}
+
+function switchContrast(self) {
 
 
     self.classList.toggle('rotate')
@@ -32,24 +71,22 @@ function switchContrast(self){
 //window.load(checkContrast())
 
 
-function checkContrast(){
+function checkContrast() {
 
     console.log(`chek, is ${contrast}`);
-    if(contrast){
+    if (contrast) {
         console.log("change contrast");
         document.body.classList.toggle('alt-mode');
-    }
-    else{
+    } else {
         document.body.classList.remove('alt-mode');
     }
 }
 
-function switchText(self,tts, tts2){
+function switchText(self, tts, tts2) {
 
-    if(self.textContent === tts){
+    if (self.textContent === tts) {
         self.textContent = tts2;
-    }
-    else{
+    } else {
         self.textContent = tts;
     }
 }
@@ -84,3 +121,30 @@ function saveFile(url, filename) {
     a.click();
     document.body.removeChild(a);
 }
+
+
+//AI ZONE -------------------------------------------------------------------------------------------
+
+let isDragging = false;
+let currentElement = null;
+
+function startDrag(element) {
+    element.addEventListener("mousedown", (e) => {
+        isDragging = true;
+        currentElement = element;
+
+        e.preventDefault();
+    });
+}
+
+document.addEventListener("mousemove", (e) => {
+    if (isDragging && currentElement) {
+        currentElement.style.position = 'absolute';
+        currentElement.style.left = `${e.clientX - 150}px`;
+        currentElement.style.top = `${e.clientY - 10}px`;
+    }
+});
+document.addEventListener("mouseup", () => {
+    isDragging = false;
+    currentElement = null;
+});
