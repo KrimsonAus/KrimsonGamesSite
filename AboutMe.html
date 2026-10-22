@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <title>Home - Jai Vanderark</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="./graphics/ICO.png?">
+</head>
+<body>
+<header class="topPanel">
+    <img src="graphics/contrast-icon.svg" onclick="switchContrast(this)" class="ns rotbut" alt="contrast"></img>
+    <button class="button" type="button" onclick="takeToPage('index')">Home</button>
+    <h1>|</h1>
+    <button class="button" type="button" onclick="takeToPage('Resume')">Resume</button>
+    <h1>|</h1>
+    <button class="button" type="button" onclick="takeToPage('Portfolio')">Portfolio</button>
+
+
+    <h1 class="topText">Jai Vanderark</h1>
+</header>
+<main class="centerText gold">
+
+    <div onclick="downloadFile('./graphics/PFP_Lain.png', 'LainPFP')" class="pfp clickable">
+        <img class="pfpImage" src="graphics/PFP_Lain.png" alt="PFP Lain Logo">
+        <div class="overlay">
+            <p>My PFP</p>
+        </div>
+    </div>
+    <h2>About Me:</h2>
+    <p>I am Jai Vanderark.</p>
+    <p>I am a games programmer currently studying at SAE Brisbane.</p>
+    <p>I make game in C# in Unity engine ᚦough i do have experience with other engines and languages.</p>
+    <p>I love playing video game and programming in my free time.</p>
+
+</main>
+<footer class="bottomPanel stickBot">
+    <p>by Jai Vanderark</p>
+    <p>|</p>
+    <p>made entirely by humans.</p>
+    <img onclick="window.open('https://archlinux.org/')" src="graphics/8831/archlinux.png" class="link">
+    <img onclick="window.open('https://www.sega.com/sonic-the-hedgehog')" src="graphics/8831/autism.png" class="link">
+    <img onclick="window.open('https://the-wired-navi.vercel.app/')" src="graphics/8831/lain.gif" class="link">
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
