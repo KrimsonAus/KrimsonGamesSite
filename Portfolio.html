@@ -18,8 +18,6 @@
     <button class="button" type="button" onclick="takeToPage('index')">Home</button>
     <h1>|</h1>
     <button class="button" type="button" onclick="takeToPage('Resume')">Resume</button>
-    <h1>|</h1>
-    <button class="button" type="button" onclick="takeToPage('AboutMe')">About Me</button>
 
     <h1 class="topText">Portfolio</h1>
 </header>
@@ -37,8 +35,17 @@
     <h1> Some of my best projects:</h1>
 
     <div onload="autoCarousel()" class="itchGame">
-        <h2>ᚦe Dead End Job</h2>
-        <p>I was ᚦe primary Programmer and helped wiᚦ ᚦe ideation for ᚦis game.</p>
+
+        <video class="trailerVideo" id="vid1" controls autoplay>
+            <source id="vidPlayer" src="./graphics/gamemedia/thedeadendjob/trailer.mp4" type="video/mp4">
+            Your browser does not support HTML video.
+        </video>
+        <button id="vid1x" style="z-index: 100; position: absolute; translate: -50% 1300%; display: none" onclick="StopTrailer('vid1')">Close Video</button>
+        <div class="cover"></div>
+
+
+        <h2>the Dead End Job</h2>
+        <p>I was the primary Programmer and helped with the ideation for this game.</p>
         <wa-carousel navigation pagination loop mouse-dragging>
 
             <wa-carousel-item>
@@ -61,20 +68,17 @@
                      src="./graphics/gamemedia/thedeadendjob/4HD.png" alt="Nature scene"/>
             </wa-carousel-item>
 
-            <wa-carousel-item>
-                <video width="500px" controls autoplay>
-                    <source id="vidPlayer" src="./graphics/gamemedia/thedeadendjob/trailer.mp4" type="video/mp4">
-                    Your browser does not support HTML video.
-                </video>
-            </wa-carousel-item>
-
         </wa-carousel>
-        <button onclick="window.open('https://krimsonschool.itch.io/the-dead-end-job')" class="itchButton">Go to ᚦe page</button>
+        <br>
+        <button onclick="ShowTrailerVid('vid1')">Watch the trailer</button>
+        <br>
+        <br>
+        <button onclick="window.open('https://krimsonschool.itch.io/the-dead-end-job')" class="itchButton">Go to the page</button>
     </div>
 
     <div class="itchGame">
         <h2>Eclipse Reborn</h2>
-        <p>I was ᚦe Programmer and game designer.</p>
+        <p>I was the Programmer and game designer.</p>
         <wa-carousel navigation pagination loop mouse-dragging>
 
             <wa-carousel-item>
@@ -94,7 +98,7 @@
             </wa-carousel-item>
 
         </wa-carousel>
-        <button onclick="window.open('https://krimsonschool.itch.io/eclipse-reborn')" class="itchButton">Go to ᚦe page</button>
+        <button onclick="window.open('https://krimsonschool.itch.io/eclipse-reborn')" class="itchButton">Go to the page</button>
     </div>
 
     <br>
@@ -120,7 +124,7 @@
     <p>made entirely by humans.</p>
     <img onclick="window.open('https://archlinux.org/')" src="graphics/8831/archlinux.png" class="link">
     <img onclick="window.open('https://www.sega.com/sonic-the-hedgehog')" src="graphics/8831/autism.png" class="link">
-    <img onclick="window.open('https://the-wired-navi.vercel.app/')" src="graphics/8831/lain.gif" class="link">
+    <img onclick="window.open('https://en.wikipedia.org/wiki/Serial_Experiments_Lain')" src="graphics/8831/lain.gif" class="link">
 </footer>
 <script src="script.js"></script>
 </body>

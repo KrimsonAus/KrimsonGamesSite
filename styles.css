@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+
 :root {
     --backCol: #193d3f;
     --primCol: #ffe762;
@@ -10,6 +11,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: "LainText";
     src: url("./fonts/LainText.ttf") format("truetype");
@@ -17,7 +19,7 @@
     font-style: normal;
 }
 
-.centerText{
+.centerText {
     text-align: center;
     user-select: none;
 }
@@ -28,7 +30,7 @@
     align-items: center;
 }
 
-.gold{
+.gold {
     transition: color ease-in-out 0.5s;
     color: var(--primCol);
 }
@@ -63,12 +65,14 @@
 
     transition: background-color ease-in-out 0.5s;
 }
+
 @font-face {
     font-family: 'JetBrains Mono Full';
     src: url('./fonts/JetBrainsMono-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
+
 body {
     transition: background-color ease-in-out 0.5s;
     background-color: darkcyan;
@@ -90,7 +94,7 @@ body {
     box-sizing: border-box;
 }
 
-.button:hover{
+.button:hover {
     color: white;
     background-color: darkgoldenrod;
 
@@ -122,20 +126,24 @@ body {
 
     transition: color, background-color ease-in-out 0.5s;
 }
-.u{
+
+.u {
     text-decoration: underline;
 }
-.bigText{
+
+.bigText {
     font-size: 50px;
 }
-.ns{
+
+.ns {
     user-select: none;
 }
-.us{
+
+.us {
     user-select: all;
 }
 
-.panel{
+.panel {
     text-spacing: none;
 }
 
@@ -145,50 +153,53 @@ p {
     margin: 5px;
     user-select: none;
 
-    transition: color    ease-in-out 0.5s;
+    transition: color ease-in-out 0.5s;
 }
 
-.link{
+.link {
     font: 14px "sans-serif", sans-serif;
     display: inline-block;
     transition: transform 0.1s ease-in-out;
 
     color: blue;
 }
-.link:hover{
+
+.link:hover {
     font: bold 14px "sans-serif", sans-serif;
     cursor: pointer;
     transform: scale(1.1);
 }
 
-.rotbut{
+.rotbut {
     height: 40px;
     transition: 0.5s ease-in-out;
 }
-.rotbut.rotate{
-     transform: rotate(180deg);
+
+.rotbut.rotate {
+    transform: rotate(180deg);
 }
 
 
-body.alt-mode{
+body.alt-mode {
     color: black;
     background-color: white;
 }
-body.alt-mode p:hover{
+
+body.alt-mode p:hover {
     color: #262626;
 }
 
 body.alt-mode p,
-body.alt-mode h1{
+body.alt-mode h1 {
     color: black;
 }
 
 body.alt-mode header,
-body.alt-mode footer{
+body.alt-mode footer {
     background-color: lightgray;
 }
 
-body.alt-mode button{
+body.alt-mode button {
     background-color: darkgrey;
     color: black;
 }
@@ -200,22 +211,21 @@ body.alt-mode button{
     width: 100%;
 }
 
-img{
+img {
     margin: 5px;
 }
 
-.glow{
+.glow {
     transition: box-shadow 0.2s ease-in-out;
 }
 
-.glow:hover{
+.glow:hover {
     box-shadow: 0px 5px 25px yellow;
     box-shadow-blur: 5px;
 }
 
 
-
-.overlay{
+.overlay {
     position: absolute;
     inset: 0;
     opacity: 0;
@@ -230,7 +240,7 @@ img{
     border-radius: 25%;
 }
 
-.pfp{
+.pfp {
     border-radius: 25%;
     position: relative;
     left: calc(50% - 125px);
@@ -240,20 +250,20 @@ img{
     transition: .5s ease;
 }
 
-.pfp:hover .overlay{
+.pfp:hover .overlay {
     opacity: 0.97;
     mask-clip: content-box;
 }
 
-.pfp:hover{
+.pfp:hover {
     border-radius: 50%;
 }
 
-.pfp:hover .pfpImage{
+.pfp:hover .pfpImage {
     filter: brightness(200%);
 }
 
-.pfpImage{
+.pfpImage {
     border-radius: 25%;
     display: block;
     width: 100%;
@@ -263,7 +273,7 @@ img{
     transition: .5s ease;
 }
 
-.overlay p{
+.overlay p {
     text-transform: uppercase;
     margin: 0;
     font: bold 50px "Roboto", sans-serif;
@@ -276,25 +286,25 @@ img{
     color: transparent;
 }
 
-.clickable:hover{
+.clickable:hover {
     cursor: pointer;
 }
 
-.itchButton{
+.itchButton {
     background-color: #fa5c5c;
     font-size: 30px;
 }
 
-.itchButton:hover{
+.itchButton:hover {
     cursor: pointer;
     scale: 1.1;
 }
 
-.itchButton img{
+.itchButton img {
     width: 15%;
 }
 
-.itchButton span{
+.itchButton span {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -318,6 +328,7 @@ wa-carousel-item img {
 
     transition: 0.2s ease-in-out;
 }
+
 wa-carousel-item img:hover {
     position: absolute;
     top: 0;
@@ -326,10 +337,10 @@ wa-carousel-item img:hover {
 
     scale: 1.2;
 
-    //want to switch out src to current source name + "HD"
+/ / want to switch out src to current source name + "HD"
 }
 
-.itchGame{
+.itchGame {
     color: gold;
     border-radius: 10px;
     background-color: darkblue;
@@ -343,7 +354,7 @@ wa-carousel-item img:hover {
 
 }
 
-.musicPlayerTop{
+.musicPlayerTop {
     background-color: dimgray;
 
     position: absolute;
@@ -358,21 +369,67 @@ wa-carousel-item img:hover {
     z-index: 9999;
 }
 
-.musicPlayer{
+.musicPlayer {
     background-color: lightgray;
 
     width: 300px;
     height: 400px;
 }
 
-.musicPlayer img{
+.musicPlayer img {
     width: 280px;
 }
 
-.contactBlock{
+.contactBlock {
     background-color: darkolivegreen;
     max-width: 400px;
     margin: 2rem auto;
     padding-top: 10px;
     padding-bottom: 20px;
+}
+
+.interest {
+    width: 750px;
+    background: darkolivegreen;
+    padding: 50px 20px;
+}
+
+button{
+    font-size: 30px;
+    background-color: darkseagreen;
+}
+
+button:hover {
+    cursor: pointer;
+    scale: 1.1;
+    color: #ffe762;
+}
+
+.trailerVideo{
+    display: none;
+
+    width: 900px;
+
+    position: absolute;
+    z-index: 99;
+    translate: -50%;
+}
+
+.cover{
+    position: absolute;
+    background-color: #161616b3;
+    width: 100vw;
+    height: 200vh;
+    left: 0;
+    top: 0;
+    z-index: 98;
+
+    overflow: hidden;
+
+    display: none;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }

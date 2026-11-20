@@ -55,7 +55,7 @@ function callPhone(num) {
     window.open(`tel:${num}`);
 }
 
-function openEmail(email){
+function openEmail(email) {
     window.open(`mailto:${email}`);
 }
 
@@ -148,3 +148,21 @@ document.addEventListener("mouseup", () => {
     isDragging = false;
     currentElement = null;
 });
+
+
+function ShowTrailerVid(id) {
+    document.getElementsByClassName('cover')[0].style.display = 'inline'
+
+    document.getElementById(id).style.display = 'inline';
+    document.getElementById(id+'x').style.display = 'inline';
+    document.getElementById(id).play();
+}
+
+function StopTrailer(id){
+    document.getElementsByClassName('cover')[0].style.display = 'none'
+
+
+    document.getElementById(id).style.display = 'none';
+    document.getElementById(id+'x').style.display = 'none';
+    document.getElementById(id).pause();
+}
